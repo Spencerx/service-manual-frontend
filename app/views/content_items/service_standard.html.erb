@@ -16,9 +16,9 @@
       <p class="page-header__summary">
         <%= @content_item.content_item["description"] %>
       </p>
-      <p class="page-header__intro">
-        <%= @content_item.content_item["details"]["body"] %>
-      </p>
+      <div class="page-header__intro">
+        <%= @content_item.content_item["details"]["body"].html_safe %>
+      </div>
     </div>
   </div>
 </div>
