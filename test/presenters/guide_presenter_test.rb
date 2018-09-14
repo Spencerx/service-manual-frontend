@@ -44,7 +44,7 @@ class GuidePresenterTest < ActiveSupport::TestCase
 
     presenter = GuidePresenter.new(JSON.parse(example))
 
-    assert presenter.category_title, "The Digital Service Standard"
+    assert presenter.category_title, "The Government Service Standard"
   end
 
   test "#category_title can be empty" do

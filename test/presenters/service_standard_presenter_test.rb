@@ -51,13 +51,13 @@ class ServiceStandardPresenterTest < ActiveSupport::TestCase
 
   test "#breadcrumbs contains a link to the service manual root" do
     content_item_hash = {
-      "title" => "Digital Service Standard"
+      "title" => "Government Service Standard"
     }
 
     assert ServiceStandardPresenter.new(content_item_hash).breadcrumbs,
       [
         { title: "Service manual", url: "/service-manual" },
-        { title: "Digital Service Standard" },
+        { title: "Government Service Standard" },
       ]
   end
 
