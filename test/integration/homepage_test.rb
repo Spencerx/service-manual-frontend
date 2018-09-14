@@ -6,7 +6,7 @@ class HomepageTest < ActionDispatch::IntegrationTest
 
     assert page.has_content? <<-TEXT
       Helping government teams create and run
-      great digital services that meet the Digital Service Standard.
+      great digital services that meet the Government Service Standard.
     TEXT
   end
 
@@ -27,16 +27,16 @@ class HomepageTest < ActionDispatch::IntegrationTest
     assert page.has_link? 'Agile delivery', href: '/service-manual/agile-delivery'
   end
 
-  test 'the homepage includes a link to the digital service standard' do
+  test 'the homepage includes a link to the government service standard' do
     setup_and_visit_example('service_manual_homepage', 'service_manual_homepage')
 
     assert page.has_content? <<-TEXT
-      The Digital Service Standard provides the principles of building a good
+      The Government Service Standard provides the principles of building a good
       digital service. This manual explains what teams can do to build great
       digital services that will meet the standard.
     TEXT
 
-    assert page.has_link? 'Digital Service Standard', href: '/service-manual/service-standard'
+    assert page.has_link? 'Government Service Standard', href: '/service-manual/service-standard'
   end
 
   test 'the homepage includes a link to the communities of practise' do
